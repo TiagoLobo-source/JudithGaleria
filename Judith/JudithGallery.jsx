@@ -1,5 +1,6 @@
 123;
 
+<<<<<<< HEAD
 console.log('Helloooo Kangdani');
 
 import React from 'react';
@@ -31,3 +32,11 @@ const styles = {
 };
 
 export default MyComponent;
+=======
+console.log('Hello Kangdani');
+
+console.log('trying terminal git');
+let cacca = 'again!';
+
+console.log('HelloWorld');
+>>>>>>> 429f2416c20bb2ec6c8bbe87534f7a53dce58b09
