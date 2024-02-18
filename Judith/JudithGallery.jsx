@@ -1,1 +1,3 @@
-123
+123;
+
+console.log('muthafuckers');
