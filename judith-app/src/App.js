@@ -12,7 +12,7 @@ function App() {
 
 export default App;
 
-  /*"eslintConfig": {
+/*"eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
