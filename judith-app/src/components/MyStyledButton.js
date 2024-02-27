@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 export default function MyStyledButton({ onClick, link, children }) {
 	const handleClick = () => {
+		// call the function if provided
 		if (onClick) {
 			onClick();
 		}
