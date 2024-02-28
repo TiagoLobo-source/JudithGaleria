@@ -10,6 +10,7 @@ export default function FloatingCard({ onClick }) {
 	);
 }
 
+// Temporary CSS for a test info card
 const FloatingCardContainer = styled.div`
 	position: fixed;
 	top: 50%;
