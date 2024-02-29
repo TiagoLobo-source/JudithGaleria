@@ -2,6 +2,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import designSystem from './designSystem';
+import GlobalStyles from './GlobalStyles';
 // import Button from './components/Button';
 import MyStyledButton from './components/MyStyledButton';
 import { StyledIcon } from './components/StyledIcon';
@@ -24,6 +25,8 @@ function App() {
 				</MyStyledButton>
 				{showInfo && <FloatingCard onClick={toggleInfo} />}
 			</div>
+
+			<GlobalStyles />
 		</ThemeProvider>
 	);
 }
