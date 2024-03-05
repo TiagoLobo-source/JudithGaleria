@@ -1,11 +1,10 @@
-// import './App.css';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import designSystem from './designSystem';
 import GlobalStyles from './GlobalStyles';
-// import Button from './components/Button';
-import MyStyledButton from './components/MyStyledButton';
+import Styles from './Styles';
+import Button from './components/Button';
 import { StyledIcon } from './components/StyledIcon';
+import Aligner from './components/Aligner';
 import FloatingCard from './components/FloatingCard';
 
 function App() {
@@ -17,12 +16,19 @@ function App() {
 	}
 
 	return (
-		<ThemeProvider theme={designSystem}>
+		<ThemeProvider theme={Styles}>
 			<div className="App">
-				<MyStyledButton link={shopLink}> Shop↗ </MyStyledButton>
-				<MyStyledButton onClick={toggleInfo}>
-					<StyledIcon />
-				</MyStyledButton>
+				<Aligner align={'bot left'}>
+					<Button link={shopLink}> Shop↗ </Button>
+				</Aligner>
+				<Aligner align={'top left'}>
+					<Button onClick={toggleInfo}>
+						<StyledIcon />
+					</Button>
+				</Aligner>
+				<Aligner align={'bot right'}>
+					<Button>I'm A Button in a corner</Button>
+				</Aligner>
 				{showInfo && <FloatingCard onClick={toggleInfo} />}
 			</div>
 
@@ -32,10 +38,3 @@ function App() {
 }
 
 export default App;
-
-/*"eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },*/
