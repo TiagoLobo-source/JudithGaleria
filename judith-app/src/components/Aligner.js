@@ -15,9 +15,10 @@ export default function Aligner({ align, children }) {
 
 const Wrapper = styled.div`
 	position: absolute;
-	${({ align }) => (align ? alignStyles[align] : '')}
+	${({ align }) => (align ? alignStyles[align] : 'center')}
 `;
 
+// Currently accepted alignment parameters:
 const alignStyles = {
 	'top left': 'top: 0; left: 0;',
 	'top right': 'top: 0; right: 0;',

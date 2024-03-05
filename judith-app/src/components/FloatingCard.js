@@ -9,6 +9,7 @@ export default function FloatingCard({ onClick }) {
 			<Aligner align={'top left'}>
 				<Button onClick={onClick}>X</Button>
 			</Aligner>
+			<Aligner align={'center'}>Text example</Aligner>
 		</FloatingCardContainer>
 	);
 }
@@ -17,6 +18,7 @@ const FloatingCardContainer = styled.div`
 	${({ theme }) => `
 		background-color: ${theme.infoCard.backgroundColor};
 		border-radius: ${theme.infoCard.borderRadius};
+		color: white;
 		position: absolute;
 		height: 98%;
 		width: 90%;
