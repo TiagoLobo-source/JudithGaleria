@@ -9,7 +9,7 @@ const Styles = {
 	secondaryTextColor: 'gray',
 
 	infoCard: {
-		backgroundColor: 'hsla(0, 0%, 15%, 1)',
+		backgroundColor: 'hsla(0, 0%, 8%, 1)',
 		borderRadius: '0px 16px 16px 0px',
 	},
 
