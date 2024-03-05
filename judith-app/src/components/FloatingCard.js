@@ -1,22 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
-import MyStyledButton from './MyStyledButton';
+import Button from './Button';
+import Aligner from './Aligner';
 
 export default function FloatingCard({ onClick }) {
 	return (
 		<FloatingCardContainer>
-			<MyStyledButton onClick={onClick}>Close window</MyStyledButton>
+			<Aligner align={'top left'}>
+				<Button onClick={onClick}>X</Button>
+			</Aligner>
 		</FloatingCardContainer>
 	);
 }
 
-// Temporary CSS for a test info card
 const FloatingCardContainer = styled.div`
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: #ffffff;
-	padding: 20px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	${({ theme }) => `
+		background-color: ${theme.infoCard.backgroundColor};
+		border-radius: ${theme.infoCard.borderRadius};
+		position: absolute;
+		height: 98%;
+		width: 90%;
+		top: 1%;
+		left: -100%;
+		padding: 20px;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+		transition: left 0.5s ease-in-out;
+		left: 0%;
+
+	`}
 `;
