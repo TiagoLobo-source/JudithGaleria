@@ -26,6 +26,9 @@ function App() {
 						<StyledIcon />
 					</Button>
 				</Aligner>
+				<Aligner align={'top right'}>
+					<Button onClick={toggleInfo}>Try me</Button>
+				</Aligner>
 				<Aligner align={'bot right'}>
 					<Button>I'm A Button in a corner</Button>
 				</Aligner>
