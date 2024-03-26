@@ -1,0 +1,16 @@
+.scroll-container {
+    display: flex;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* For Firefox */
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
+body {
+    background-color: #151414;
+}
