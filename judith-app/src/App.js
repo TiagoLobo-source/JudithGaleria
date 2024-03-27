@@ -8,8 +8,6 @@ import Aligner from './components/Aligner';
 import FloatingCard from './components/FloatingCard';
 import HorizontalScroll from './components/HorizontalScroll';
 import ImageColumn from './components/ImageColumn';
-import Image from './components/Image';
-
 
 
 

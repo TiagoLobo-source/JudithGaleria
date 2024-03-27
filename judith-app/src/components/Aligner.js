@@ -24,5 +24,9 @@ const alignStyles = {
 	'top right': 'top: 0; right: 0;',
 	'bot left': 'bottom: 0; left: 0;',
 	'bot right': 'bottom: 0; right: 0;',
+	// 'top': 'top:0;',
+	// 'bot': 'bottom: 0;',
+	// 'left': "left: 0;",
+	// 'right': "right: 0;",
 	center: 'top: 50%; left: 50%;',
 };
