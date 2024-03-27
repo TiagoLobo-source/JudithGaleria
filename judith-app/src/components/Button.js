@@ -23,7 +23,7 @@ const MyButton = styled.button`
     font-size: ${theme.fontSize};
     line-height: ${theme.lineHeight};
     padding: ${theme.button.padding};
-	margin: ${theme.button.margin};
+	  margin: ${theme.button.margin};
     min-height: ${theme.button.minHeight};
     min-width: ${theme.button.minWidth};
     background-color: ${theme.button.backgroundColor};
