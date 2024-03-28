@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Button({ link, onClick, children }) {
+export default function Button({ link, onClick, children, zIndex = 0 }) {
 	const handleClick = () => {
 		if (onClick) {
 			onClick();
@@ -12,13 +12,13 @@ export default function Button({ link, onClick, children }) {
 		}
 	};
 
-	return <MyButton onClick={handleClick}>{children}</MyButton>;
+	return <MyButton onClick={handleClick} zIndex={zIndex} >{children}</MyButton>;
 }
 
 const MyButton = styled.button`
 	/* Destructuring the 'theme' object inherited from the themeProvider 
 	in the props */
-	${({ theme }) => `
+	${({ theme, zIndex }) => `
     font-family: ${theme.fontFamily};
     font-size: ${theme.fontSize};
     line-height: ${theme.lineHeight};
@@ -32,6 +32,7 @@ const MyButton = styled.button`
     color: ${theme.textColor};
     cursor: ${theme.button.cursor};
     opacity: ${theme.button.opacity};
+    ${zIndex ? `z-index: ${zIndex};` : ''}
 
     &:hover {
       opacity: ${theme.button.onHover.opacity};

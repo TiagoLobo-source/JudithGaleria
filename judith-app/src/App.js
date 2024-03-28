@@ -32,7 +32,7 @@ function App() {
 					/>					
 					))}
 				</HorizontalScroll>
-				<Aligner align={'bot left'}>
+				<Aligner align={'bot left'} zIndex={3}>
 					<Button link={shopLink}> Shop↗ </Button>
 				</Aligner>
 				<Aligner align={'top left'}>
