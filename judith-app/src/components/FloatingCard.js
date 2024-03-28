@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import Button from './Button';
 import Aligner from './Aligner';
 
-export default function FloatingCard({ onClick }) {
+export default function FloatingCard({ onClick, isShown }) {
 	return (
-		<FloatingCardContainer>
-			<Aligner align={'top left'}>
+		<FloatingCardContainer isShown={isShown}>
+			<Aligner align={'top left: 1%;'}>
 				<Button onClick={onClick}>X</Button>
 			</Aligner>
 			<Aligner align={'center'}>Text example</Aligner>
@@ -15,7 +15,7 @@ export default function FloatingCard({ onClick }) {
 }
 
 const FloatingCardContainer = styled.div`
-	${({ theme }) => `
+	${({ theme, isShown }) => `
 		background-color: ${theme.infoCard.backgroundColor};
 		border-radius: ${theme.infoCard.borderRadius};
 		color: white;
@@ -23,11 +23,10 @@ const FloatingCardContainer = styled.div`
 		height: 98%;
 		width: 90%;
 		top: 1%;
-		left: -100%;
 		padding: 20px;
 		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-		transition: left 0.5s ease-in-out;
-		left: 0%;
+		transition: left 0.5s cubic-bezier(0.8, 0.1, 1, 0.2);
+		left: ${isShown ? '-1.9%' : '-100%'};
 		z-index: 2;
 
 	`}

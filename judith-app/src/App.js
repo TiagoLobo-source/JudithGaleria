@@ -40,7 +40,8 @@ function App() {
 						<StyledIcon />
 					</Button>
 				</Aligner>
-				{showInfo && <FloatingCard onClick={toggleInfo} />}
+				{/* {showInfo && <FloatingCard onClick={toggleInfo} />} */}
+				<FloatingCard onClick={toggleInfo} isShown={showInfo} />
 			</div>
 			<GlobalStyles />
 		</ThemeProvider>

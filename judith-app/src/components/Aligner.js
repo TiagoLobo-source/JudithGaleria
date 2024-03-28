@@ -15,19 +15,22 @@ export default function Aligner({ align, children }) {
 
 const Wrapper = styled.div`
 	position: absolute;
-	/* ${({ align }) => (align ? alignStyles[align] : 'center')} */
 	${({ align }) => {
-    const positions = (align ? align.split(' ') : ['center']);
-    return positions.map(position => alignStyles[position] || '').join('');
-  }}
+        const positions = (align ? align.split(' ') : []);
+        return positions.map(position => {
+            if (alignStyles[position]) {
+                return alignStyles[position];
+            } else if (position.includes(':')) {
+                return position + ';';
+            } else {
+                return '';
+            }
+        }).join('');
+    }}
 `;
 
 // Currently accepted alignment parameters:
 const alignStyles = {
-	// 'top left': 'top: 0; left: 0;',
-	// 'top right': 'top: 0; right: 0;',
-	// 'bot left': 'bottom: 0; left: 0;',
-	// 'bot right': 'bottom: 0; right: 0;',
 	'top': 'top:0;',
 	'bot': 'bottom: 0;',
 	'left': "left: 0;",
