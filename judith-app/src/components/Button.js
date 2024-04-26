@@ -6,7 +6,10 @@ export default function Button({ link, onClick, children, zIndex = 0 }) {
 		if (onClick) {
 			onClick();
 		}
-
+		// Redirect to the link if provided, opens in new tab
+		if (link) {
+			window.open(link, '_blank');
+		}
 	};
 
 	return <MyButton onClick={handleClick} zIndex={zIndex} >{children}</MyButton>;
