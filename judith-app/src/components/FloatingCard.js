@@ -6,9 +6,9 @@ import Aligner from './Aligner';
 export default function FloatingCard({ onClick, isShown }) {
 	return (
 		<FloatingCardContainer isShown={isShown}>
-			<Aligner align={'top left: 1%;'}>
+			{/* <Aligner align={'top left: 1%;'}>
 				<Button onClick={onClick}>X</Button>
-			</Aligner>
+			</Aligner> */}
 			<Aligner align={'center'}>Text example</Aligner>
 		</FloatingCardContainer>
 	);

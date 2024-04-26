@@ -6,10 +6,7 @@ export default function Button({ link, onClick, children, zIndex = 0 }) {
 		if (onClick) {
 			onClick();
 		}
-		// Redirect to the link if provided
-		if (link) {
-			window.location.href = link;
-		}
+
 	};
 
 	return <MyButton onClick={handleClick} zIndex={zIndex} >{children}</MyButton>;
@@ -19,6 +16,7 @@ const MyButton = styled.button`
 	/* Destructuring the 'theme' object inherited from the themeProvider 
 	in the props */
 	${({ theme, zIndex }) => `
+    position: relative;
     font-family: ${theme.fontFamily};
     font-size: ${theme.fontSize};
     line-height: ${theme.lineHeight};
@@ -35,12 +33,12 @@ const MyButton = styled.button`
     ${zIndex ? `z-index: ${zIndex};` : ''}
 
     &:hover {
-      opacity: ${theme.button.onHover.opacity};
+    
       transition: ${theme.button.onHover.transition};
+      background-color: ${theme.button.onActive.backgroundColor};
     }
 
     &:active {
-      background-color: ${theme.button.onActive.backgroundColor};
       opacity: ${theme.button.onActive.opacity};
     }
   `}

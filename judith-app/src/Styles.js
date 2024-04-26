@@ -16,7 +16,7 @@ const Styles = {
 	button: {
 		fontWeight: '400',
 		padding: '16px',
-		margin: '10px',
+		margin: '16px',
 		lineHeight: '19px',
 		backgroundColor: 'hsl(0, 2%, 8%)',
 		minHeight: '51px',
@@ -25,15 +25,17 @@ const Styles = {
 		// borderRadius: '71% 29% 65% 35% / 37% 56% 44% 63% ',
 		borderRadius: '40px',
 		cursor: 'pointer',
-
+		
 		onHover: {
-			opacity: '0.5',
 			transition: '0.3s ease-in',
-		},
-
-		onActive: {
 			backgroundColor: '#8000ff',
-			opacity: '1',
+		},
+		
+		onActive: {
+
+			backgroundColor: '#8000ff',
+			opacity: '0.5',
+			// opacity: '1',
 		},
 	},
 	// ... other design system properties

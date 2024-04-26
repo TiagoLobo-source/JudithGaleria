@@ -32,15 +32,14 @@ function App() {
 					/>					
 					))}
 				</HorizontalScroll>
-				<Aligner align={'bot left'} zIndex={3}>
-					<Button link={shopLink}> Shop↗ </Button>
-				</Aligner>
 				<Aligner align={'top left'}>
-					<Button onClick={toggleInfo}>
-						<StyledIcon />
+					<Button onClick={toggleInfo} zIndex={3}>
+						{showInfo ? 'X' : <StyledIcon />}
 					</Button>
 				</Aligner>
-				{/* {showInfo && <FloatingCard onClick={toggleInfo} />} */}
+				<Aligner align={'bot left'} zIndex={1}>
+					<Button link={shopLink} zIndex={3}> Shop↗ </Button>
+				</Aligner>
 				<FloatingCard onClick={toggleInfo} isShown={showInfo} />
 			</div>
 			<GlobalStyles />
