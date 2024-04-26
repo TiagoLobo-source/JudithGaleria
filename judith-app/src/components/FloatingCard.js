@@ -17,7 +17,7 @@ export default function FloatingCard({ onClick, isShown }) {
 const FloatingCardContainer = styled.div`
 	${({ theme, isShown }) => `
 		background-color: ${theme.infoCard.backgroundColor};
-		border-radius: ${isShown ? '0% 18% 18% 0% / 0% 100% 100% 35%' : '5%'};
+		border-radius: ${theme.infoCard.borderRadius};
 		color: white;
 		position: absolute;
 		height: 99%;
@@ -25,7 +25,7 @@ const FloatingCardContainer = styled.div`
 		top: 0.5%;
 		padding: 20px;
 		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-		transition: left 0.5s cubic-bezier(0.8, 0.1, 1, 0.2), border-radius 0.7s ;
+		transition: left 0.1s cubic-bezier(0.9, 0, 0.1, 0);
 		left: ${isShown ? '-1.9%' : '-100%'};
 		z-index: 2;
 	`}
