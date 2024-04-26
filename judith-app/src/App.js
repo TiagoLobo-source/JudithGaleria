@@ -23,7 +23,7 @@ function App() {
 		<ThemeProvider theme={Styles}>
 			<div className="App">
 			<HorizontalScroll>
-				{/* We'll need a more efficient way to store the images and map over them */}
+				{/* Eventually we'll need a more efficient way to store the images and map over them */}
 					{[...Array(19)].map((_, index) => (
 					<ImageColumn 
 						key={`column${index}`} 
